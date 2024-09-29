@@ -1,0 +1,50 @@
+
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Maker</title>
+    <link rel="stylesheet" href="style4s.css">
+</head>
+<body>
+    <div id="app">
+        <div id="home" class="section">
+            <h1>Welcome to the Online Quiz Maker</h1>
+            <button onclick="showSection('quizCreation')">Create a Quiz</button>
+            <button onclick="showSection('quizListing')">Take a Quiz</button>
+        </div>
+
+        <div id="quizCreation" class="section hidden">
+            <h2>Create a New Quiz</h2>
+            <form id="quizForm">
+                <input type="text" placeholder="Quiz Title" required>
+                <div id="questions"></div>
+                <button type="button" onclick="addQuestion()">Add Question</button>
+                <button type="submit">Save Quiz</button>
+            </form>
+        </div>
+
+        <div id="quizListing" class="section hidden">
+            <h2>Available Quizzes</h2>
+            <div id="quizList"></div>
+            <button onclick="showSection('home')">Back</button>
+        </div>
+
+        <div id="quizTaking" class="section hidden">
+            <h2>Take the Quiz</h2>
+            <div id="currentQuestion"></div>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+
+        <div id="quizResults" class="section hidden">
+            <h2>Quiz Results</h2>
+            <div id="results"></div>
+            <button onclick="showSection('home')">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
